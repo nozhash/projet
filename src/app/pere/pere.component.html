@@ -1,0 +1,11 @@
+<p
+   [style.backgroundColor]="color"
+>pere works!</p>
+je suis le pere voici ma couleur
+<input type="text" class="form-control" [(ngModel)]="color">
+
+<hr>
+
+<app-fils
+  (sendFavoriteColor)="getSonFavoriteColor($event)"
+  (sendData)="processSonMessage($event)" [couleurPere]="color"></app-fils>
